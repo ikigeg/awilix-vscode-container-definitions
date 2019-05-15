@@ -1,0 +1,48 @@
+{
+	"name": "awilix-vscode-container-definitions",
+	"displayName": "Awilix VSCode Container Definitions",
+	"description": "Harvests definitions of variables registered to Awilix containers",
+	"publisher": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:node_modules/awilix/"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Awilix container",
+			"properties": {
+					"awilix.containerFile": {
+							"type": "string",
+							"default": "container.js",
+							"description": "Container file"                
+					}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"@types/esprima": "^4.0.2",
+		"esprima": "^4.0.1"
+	}
+}
