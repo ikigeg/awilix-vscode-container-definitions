@@ -3,7 +3,7 @@
 	"displayName": "Awilix VSCode Container Definitions",
 	"description": "Harvests definitions of variables registered to Awilix containers",
 	"publisher": "ikigeg",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "(MIT OR Apache-2.0)",
 	"engines": {
 		"vscode": "^1.33.0"
