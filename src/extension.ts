@@ -46,6 +46,7 @@ export function activate(ctx: vscode.ExtensionContext) {
 	vscode.window.showInformationMessage('Awilix module found. Awilix definitions support is activated...');
 
 	ctx.subscriptions.push(vscode.languages.registerDefinitionProvider({ language: "javascript", scheme: "file" }, new AwilixDefinitionProvider()));
+	ctx.subscriptions.push(vscode.languages.registerDefinitionProvider({ language: "typescript", scheme: "file" }, new AwilixDefinitionProvider()));
 }
 
 export function deactivate() {}
